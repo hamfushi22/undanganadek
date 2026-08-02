@@ -186,19 +186,20 @@
         </button>
     </div>
 
- <!-- ================================================================= -->
+<!-- ================================================================= -->
     <!-- 1. COVER / SPLASH SCREEN (Pintu Masuk Undangan) -->
     <!-- ================================================================= -->
-    <section id="cover-screen" class="fixed inset-0 z-50 flex h-[100dvh] w-full max-w-full flex-col items-center justify-between overflow-x-hidden overflow-y-auto bg-gradient-to-b from-sage-900 via-sage-800 to-sage-900 px-4 py-4 sm:px-6 sm:py-8 text-center text-cream-50 transition-transform duration-1000 ease-in-out">
+    <section id="cover-screen" class="fixed inset-0 z-50 flex h-[100dvh] w-full max-w-full flex-col items-center justify-between overflow-x-hidden overflow-y-auto bg-gradient-to-b from-sage-900 via-sage-800 to-sage-900 px-4 py-6 sm:px-6 sm:py-10 text-center text-cream-50 transition-transform duration-1000 ease-in-out">
         
         <!-- Frame Ornamen Atas -->
-        <div class="pt-2 space-y-1 opacity-90 shrink-0">
-            <div class="text-gold-500 text-lg sm:text-2xl font-serif tracking-widest uppercase">The Wedding Of</div>
+        <div class="space-y-1 opacity-90 shrink-0 pt-2">
+            <div class="text-gold-500 text-base sm:text-2xl font-serif tracking-widest uppercase">The Wedding Of</div>
             <div class="h-0.5 w-12 sm:w-16 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto"></div>
         </div>
 
-        <!-- Konten Utama Cover -->
-        <div class="my-auto w-full max-w-[340px] sm:max-w-md space-y-3 sm:space-y-5 py-2">
+        <!-- Konten Utama Cover (Diberi w-full dan max-w-[320px] agar pas di layar HP terramping sekalipun) -->
+        <div class="my-auto w-full max-w-[320px] sm:max-w-md space-y-3 sm:space-y-5 py-2">
+            
             <!-- Avatar Frame Pasangan -->
             <div class="relative mx-auto h-24 w-24 sm:h-32 sm:w-32 overflow-hidden rounded-full border-2 border-gold-500/70 p-1 shadow-2xl animate-float shrink-0">
                 <div class="h-full w-full overflow-hidden rounded-full">
@@ -214,10 +215,10 @@
                 <p class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-sage-200">Rabu, 02 September 2026</p>
             </div>
 
-            <!-- Kartu Nama Tamu Undangan -->
-            <div class="w-full rounded-xl sm:rounded-2xl border border-gold-500/30 bg-sage-800/60 p-3.5 sm:p-5 backdrop-blur-md shadow-xl box-border">
+            <!-- Kartu Nama Tamu Undangan (Terkunci w-full & box-border) -->
+            <div class="w-full box-border rounded-xl sm:rounded-2xl border border-gold-500/30 bg-sage-800/60 p-4 sm:p-5 backdrop-blur-md shadow-xl">
                 <p class="text-[11px] sm:text-xs font-light text-sage-300">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
-                <h2 id="guest-name-display" class="my-1 font-title text-lg sm:text-2xl font-semibold text-cream-100 capitalize break-words">
+                <h2 id="guest-name-display" class="my-1.5 font-title text-lg sm:text-2xl font-semibold text-cream-100 capitalize break-words">
                     Tamu Undangan
                 </h2>
                 <p class="text-[11px] sm:text-xs text-sage-300 italic">Di Tempat</p>
@@ -233,7 +234,7 @@
         </div>
 
         <!-- Subtext Footer Cover -->
-        <p class="pb-2 text-[10px] sm:text-[11px] tracking-wider text-sage-400 shrink-0">
+        <p class="text-[10px] sm:text-[11px] tracking-wider text-sage-400 shrink-0 pb-2">
             <i class="fa-solid fa-heart text-gold-500 mr-1"></i> Mohon Maaf Apabila Ada Kesalahan Penulisan Nama/Gelar
         </p>
     </section>

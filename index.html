@@ -2,7 +2,7 @@
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Undangan Pernikahan Fadlan & Sofi</title>
     <meta name="description" content="Undangan Pernikahan Digital Muhammad Roji Fadlan & Ana Sofiana Salsabila - Rabu, 2 September 2026">
     
@@ -189,53 +189,55 @@
  <!-- ================================================================= -->
     <!-- 1. COVER / SPLASH SCREEN (Pintu Masuk Undangan) -->
     <!-- ================================================================= -->
-    <section id="cover-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-between bg-gradient-to-b from-sage-900 via-sage-800 to-sage-900 px-6 py-8 sm:py-12 text-center text-cream-50 transition-transform duration-1000 ease-in-out overflow-y-auto">
+    <section id="cover-screen" class="fixed inset-0 z-50 flex h-[100dvh] w-full flex-col overflow-y-auto overflow-x-hidden bg-gradient-to-b from-sage-900 via-sage-800 to-sage-900 transition-transform duration-1000 ease-in-out">
         
-        <!-- Frame Ornamen Atas -->
-        <div class="space-y-1 sm:space-y-2 opacity-90" data-aos="fade-down" data-aos-duration="1000">
-            <div class="text-gold-500 text-xl sm:text-3xl font-serif tracking-widest uppercase">The Wedding Of</div>
-            <div class="h-0.5 w-16 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto"></div>
-        </div>
+        <!-- Safe-Centering Wrapper: Menggunakan m-auto agar otomatis di tengah jika layar besar, tapi bisa di-scroll normal (tidak terpotong atasnya) jika layar kecil -->
+        <div class="m-auto flex w-full max-w-lg flex-col items-center px-5 py-8 sm:px-8 sm:py-12">
+            
+            <!-- Frame Ornamen Atas -->
+            <div class="mb-5 space-y-1 text-center opacity-90 sm:mb-6 sm:space-y-2">
+                <div class="font-serif text-xl uppercase tracking-widest text-gold-500 sm:text-2xl">The Wedding Of</div>
+                <div class="mx-auto h-0.5 w-16 bg-gradient-to-r from-transparent via-gold-500 to-transparent"></div>
+            </div>
 
-        <!-- Konten Utama Cover -->
-        <div class="my-auto max-w-lg space-y-4 sm:space-y-6 w-full flex flex-col items-center">
             <!-- Avatar Frame Pasangan -->
-            <div class="relative h-28 w-28 sm:h-36 sm:w-36 flex-shrink-0 overflow-hidden rounded-full border-2 border-gold-500/70 p-1.5 shadow-2xl animate-float">
+            <div class="mb-5 relative h-28 w-28 shrink-0 animate-float overflow-hidden rounded-full border-2 border-gold-500/70 p-1.5 shadow-2xl sm:mb-6 sm:h-36 sm:w-36">
                 <div class="h-full w-full overflow-hidden rounded-full">
                     <img src="gambar1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'" alt="Fadlan & Sofi" class="h-full w-full object-cover">
                 </div>
             </div>
 
             <!-- Nama Mempelai -->
-            <div class="space-y-1">
-                <h1 class="font-title text-3xl sm:text-5xl font-bold tracking-wide text-gold-300">
+            <div class="mb-5 w-full space-y-1 text-center sm:mb-6">
+                <h1 class="font-title text-4xl font-bold tracking-wide text-gold-300 sm:text-5xl">
                     Fadlan & Sofi
                 </h1>
-                <p class="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-sage-200">Rabu, 02 September 2026</p>
+                <p class="text-[10px] uppercase tracking-[0.25em] text-sage-200 sm:text-xs">Rabu, 02 September 2026</p>
             </div>
 
             <!-- Kartu Nama Tamu Undangan -->
-            <div class="w-full rounded-2xl border border-gold-500/30 bg-sage-800/60 p-4 sm:p-5 backdrop-blur-md shadow-xl">
-                <p class="text-[10px] sm:text-xs font-light text-sage-300">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
-                <h2 id="guest-name-display" class="my-1.5 sm:my-2 font-title text-xl sm:text-2xl font-semibold text-cream-100 capitalize break-words">
+            <div class="mb-6 w-full rounded-2xl border border-gold-500/30 bg-sage-800/60 p-4 text-center shadow-xl backdrop-blur-md sm:mb-8 sm:p-5">
+                <p class="text-[10px] font-light text-sage-300 sm:text-xs">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                <h2 id="guest-name-display" class="my-2 break-words font-title text-xl font-semibold capitalize text-cream-100 sm:text-2xl">
                     Tamu Undangan
                 </h2>
-                <p class="text-[10px] sm:text-xs text-sage-300 italic">Di Tempat</p>
+                <p class="text-[10px] italic text-sage-300 sm:text-xs">Di Tempat</p>
             </div>
 
             <!-- Tombol Buka Undangan -->
-            <div>
-                <button onclick="openInvitation()" class="group relative inline-flex items-center gap-2.5 sm:gap-3 overflow-hidden rounded-full bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 px-6 py-3 sm:px-8 sm:py-3.5 text-xs sm:text-sm font-semibold text-sage-900 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-gold-500/20 active:scale-95">
+            <div class="mb-5 w-full text-center">
+                <button onclick="openInvitation()" class="group relative inline-flex w-auto items-center justify-center gap-2.5 overflow-hidden rounded-full bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 px-6 py-3 text-xs font-semibold text-sage-900 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-gold-500/20 active:scale-95 sm:gap-3 sm:px-8 sm:py-3.5 sm:text-sm">
                     <i class="fa-solid fa-envelope-open text-base transition-transform duration-300 group-hover:rotate-12"></i>
                     <span>Buka Undangan</span>
                 </button>
             </div>
-        </div>
 
-        <!-- Subtext Footer Cover -->
-        <p class="text-[10px] sm:text-[11px] tracking-wider text-sage-400 mt-4 flex-shrink-0">
-            <i class="fa-solid fa-heart text-gold-500 mr-1"></i> Mohon Maaf Apabila Ada Kesalahan Penulisan Nama/Gelar
-        </p>
+            <!-- Subtext Footer Cover -->
+            <p class="mt-2 shrink-0 text-center text-[9px] tracking-wider text-sage-400 sm:text-[11px]">
+                <i class="fa-solid fa-heart mr-1 text-gold-500"></i> Mohon Maaf Apabila Ada Kesalahan Penulisan Nama/Gelar
+            </p>
+
+        </div>
     </section>
     <!-- ================================================================= -->
     <!-- MAIN CONTENT CONTAINER -->

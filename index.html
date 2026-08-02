@@ -189,54 +189,47 @@
     <!-- ================================================================= -->
     <!-- 1. COVER / SPLASH SCREEN (Pintu Masuk Undangan) -->
     <!-- ================================================================= -->
-    <section id="cover-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-between bg-gradient-to-b from-sage-900 via-sage-800 to-sage-900 px-6 py-12 text-center text-cream-50 transition-transform duration-1000 ease-in-out">
-        
-        <!-- Frame Ornamen Atas -->
-        <div class="space-y-2 opacity-90" data-aos="fade-down" data-aos-duration="1000">
-            <div class="text-gold-500 text-3xl font-serif tracking-widest uppercase">The Wedding Of</div>
-            <div class="h-0.5 w-16 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto"></div>
-        </div>
+<!-- Gunakan min-h-dvh agar tingginya dinamis mengikuti area layar HP yang terlihat -->
+<section class="relative min-h-dvh w-full bg-[#1b2b23] text-[#d4af37] flex flex-col justify-between items-center px-6 py-8 overflow-hidden">
+  
+  <!-- BARIS ATAS: Spacing Kosong / Logo Kecil (jika ada) -->
+  <div></div>
 
-        <!-- Konten Utama Cover -->
-        <div class="my-auto max-w-lg space-y-6">
-            <!-- Avatar Frame Pasangan -->
-            <div class="relative mx-auto h-36 w-36 overflow-hidden rounded-full border-2 border-gold-500/70 p-1.5 shadow-2xl animate-float">
-                <div class="h-full w-full overflow-hidden rounded-full">
-                    <img src="gambar1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'" alt="Fadlan & Sofi" class="h-full w-full object-cover">
-                </div>
-            </div>
+  <!-- KONTEN UTAMA (Tengah Layar) -->
+  <div class="flex flex-col items-center text-center max-w-sm w-full my-auto space-y-4">
+    
+    <!-- Foto Bingkai Lingkaran -->
+    <div class="relative w-40 h-40 rounded-full p-1 bg-gradient-to-b from-yellow-300 to-yellow-600 shadow-xl">
+      <img src="foto-pasangan.jpg" alt="Fadlan & Sofi" class="w-full h-full object-cover rounded-full">
+    </div>
 
-            <!-- Nama Mempelai -->
-            <div class="space-y-1">
-                <h1 class="font-title text-4xl sm:text-5xl font-bold tracking-wide text-gold-300">
-                    Fadlan & Sofi
-                </h1>
-                <p class="text-xs uppercase tracking-[0.25em] text-sage-200">Rabu, 02 September 2026</p>
-            </div>
+    <!-- Judul Nama -->
+    <div class="space-y-1">
+      <h1 class="text-3xl font-serif text-amber-200 tracking-wide">Fadlan &amp; Sofi</h1>
+      <p class="text-xs uppercase tracking-widest text-amber-100/80">Rabu, 02 September 2026</p>
+    </div>
 
-            <!-- Kartu Nama Tamu Undangan -->
-            <div class="rounded-2xl border border-gold-500/30 bg-sage-800/60 p-5 backdrop-blur-md shadow-xl">
-                <p class="text-xs font-light text-sage-300">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
-                <h2 id="guest-name-display" class="my-2 font-title text-2xl font-semibold text-cream-100 capitalize">
-                    Tamu Undangan
-                </h2>
-                <p class="text-xs text-sage-300 italic">Di Tempat</p>
-            </div>
+    <!-- Card Tamu Undangan -->
+    <div class="w-full bg-[#24372d]/80 border border-amber-500/30 rounded-2xl p-4 text-center text-amber-100/90 shadow-lg backdrop-blur-sm">
+      <p class="text-xs text-amber-200/70 mb-1">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+      <h2 class="text-xl font-serif font-semibold text-amber-100 mb-1">Tamu Undangan</h2>
+      <p class="text-xs italic text-amber-200/60">Di Tempat</p>
+    </div>
 
-            <!-- Tombol Buka Undangan -->
-            <div>
-                <button onclick="openInvitation()" class="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 px-8 py-3.5 text-sm font-semibold text-sage-900 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-gold-500/20 active:scale-95">
-                    <i class="fa-solid fa-envelope-open text-base transition-transform duration-300 group-hover:rotate-12"></i>
-                    <span>Buka Undangan</span>
-                </button>
-            </div>
-        </div>
+    <!-- Tombol Buka Undangan -->
+    <button class="w-full max-w-xs py-3 px-6 bg-amber-500 hover:bg-amber-600 text-amber-950 font-semibold rounded-full shadow-lg flex items-center justify-center gap-2 transition-all active:scale-95">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+      <span>Buka Undangan</span>
+    </button>
+  </div>
 
-        <!-- Subtext Footer Cover -->
-        <p class="text-[11px] tracking-wider text-sage-400">
-            <i class="fa-solid fa-heart text-gold-500 mr-1"></i> Mohon Maaf Apabila Ada Kesalahan Penulisan Nama/Gelar
-        </p>
-    </section>
+  <!-- BARIS BAWAH: Running Text / Footer Banner -->
+  <!-- Ditambahkan padding bottom (pb-safe atau pb-4) agar tidak menempel di tepi bawah -->
+  <footer class="w-full text-center text-xs text-amber-300/80 pt-4 pb-2">
+    <p>💛 Mohon Maaf Apabila Ada Kesalahan Penulisan Nama/Gelar</p>
+  </footer>
+
+</section>
 
     <!-- ================================================================= -->
     <!-- MAIN CONTENT CONTAINER -->
